@@ -1,0 +1,79 @@
+@minHeight: calc(100vh - 96px);
+@boxSizing: border-box;
+@defaultColor: #1daef8;
+
+// Main
+.main {
+    width: 1200px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto;
+    min-height: @minHeight;
+    display: flex;
+    box-sizing: @boxSizing;
+}
+
+// Sider
+.sider {
+    background-color: #fff;
+    min-height: @minHeight;
+    flex: 5;
+    padding: 0 13px;
+    border-radius: 3px;
+    box-sizing: @boxSizing;
+    padding-top: 10px;
+    .dropdownButton {
+        width: 240px;
+        color: white;
+        background-color: @defaultColor;
+    }
+
+    :global(.ant-tree) {
+        margin-top: 10px;
+    }
+}
+
+.dropdownBlock {
+    max-width: 100%;
+    width: 240px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    .dropdownItemTitle {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .dropdownItemBlock {
+        display: flex;
+        flex-wrap: wrap;
+        > .item {
+            font-size: 13px;
+            display: inline-block;
+            color: #999;
+            margin-left: 8px;
+            margin-bottom: 5px;
+            height: 20px;
+            line-height: 20px;
+            padding: 0 3px;
+            cursor: pointer;
+            border-radius: 4px; 
+        }
+    }
+}
+
+// Content 
+.content {
+    background-color: #fff;
+    min-height: @minHeight;
+    flex: 19;
+    margin-left: 20px;
+    box-sizing: @boxSizing;
+}
+
+.top {
+    padding: 10px 13px;
+}
+
+:global .ant-radio-button-wrapper {
+    padding: 0 10px;
+}
